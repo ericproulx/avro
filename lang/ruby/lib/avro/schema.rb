@@ -42,7 +42,7 @@ module Avro
     DECIMAL_LOGICAL_TYPE = 'decimal'
 
     def self.parse(json_string)
-      real_parse(JSON.parse(json_string, create_additions: false, quirks_mode: true), {})
+      real_parse(JSON.parse(json_string), {})
     end
 
     # Build Avro Schema from data parsed out of JSON string.

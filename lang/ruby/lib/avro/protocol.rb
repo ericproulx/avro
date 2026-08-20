@@ -23,7 +23,8 @@ module Avro
 
     attr_reader :name, :namespace, :types, :messages, :md5, :doc
     def self.parse(protocol_string)
-      json_data = JSON.parse(protocol_string, create_additions: false, quirks_mode: true)
+      # `create_additions`` is false by default, quirks_mode no longer existing since json 2.0
+      json_data = JSON.parse(protocol_string)
 
       if json_data.is_a? Hash
         name = json_data['protocol']

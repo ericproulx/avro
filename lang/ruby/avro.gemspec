@@ -40,4 +40,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency("json", ">= 2.0")
+  s.add_dependency("bigdecimal") # not part of default gems since Ruby 3.4.0
 end
